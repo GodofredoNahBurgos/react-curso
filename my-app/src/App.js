@@ -4,6 +4,7 @@ import Componente from './components/Componente';
 import './App.css';
 import Propiedades from './components/Propiedades';
 import Estado from './components/Estado';
+import RenderizadoCondicional from './components/RenderizadoCondicional';
 
 class App extends Component {
 
@@ -39,7 +40,7 @@ class App extends Component {
           }/>
           <hr/>
           <Estado />
-          
+          <RenderizadoCondicional/>          
         </section>
 
 
