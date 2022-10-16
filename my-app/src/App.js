@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import Componente from './components/Componente';
 import './App.css';
 import Propiedades from './components/Propiedades';
+import Estado from './components/estado';
 
 class App extends Component {
 
@@ -36,6 +37,8 @@ class App extends Component {
           componenteReact={
             <Componente msg="Soy un componente pasado en Props"/>
           }/>
+          <hr/>
+          
         </section>
 
 
