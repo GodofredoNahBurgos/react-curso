@@ -6,7 +6,7 @@ import Propiedades from './components/Propiedades';
 import Estado from './components/Estado';
 import RenderizadoCondicional from './components/RenderizadoCondicional';
 import RenderizadoElementos from './components/RenderizadoElementos';
-import { EventosEs6, EventosEs7 } from './components/eventos';
+import { EventosEs6, EventosEs7, MasSobreEventos } from './components/eventos';
 
 class App extends Component {
 
@@ -47,6 +47,7 @@ class App extends Component {
           <hr/>
           <EventosEs6/>    
           <EventosEs7/>
+          <MasSobreEventos/>
         </section>
 
 
