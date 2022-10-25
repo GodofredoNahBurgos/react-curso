@@ -7,7 +7,7 @@ import Estado from './components/Estado';
 import RenderizadoCondicional from './components/RenderizadoCondicional';
 import RenderizadoElementos from './components/RenderizadoElementos';
 import { EventosEs6, EventosEs7, MasSobreEventos } from './components/eventos';
-
+import ComunicacionCompoentes from './components/ComunicacionCompoentes';
 class App extends Component {
 
   render() {
@@ -48,6 +48,7 @@ class App extends Component {
           <EventosEs6/>    
           <EventosEs7/>
           <MasSobreEventos/>
+          <ComunicacionCompoentes/>
         </section>
 
 
