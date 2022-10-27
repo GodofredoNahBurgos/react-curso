@@ -9,6 +9,7 @@ import RenderizadoElementos from './components/RenderizadoElementos';
 import { EventosEs6, EventosEs7, MasSobreEventos } from './components/eventos';
 import ComunicacionCompoentes from './components/ComunicacionCompoentes';
 import { CicloVida } from './components/CicloVida';
+import AjaxApis from './components/AjaxApis';
 class App extends Component {
 
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
     let nombre = "Jhon";
     let auth = false;
     let estaciones = ["Primavera", "Verano", "Otoño", "Inverno"];
+    
     return (
       <div className="App">
         <div className="App-header">
@@ -29,6 +31,7 @@ class App extends Component {
             {estaciones.map((elemento, index) => (<li key={index}>{elemento}</li>))}
           </ul>
         <section>
+          
           <Componente msg="Hola, soy un componente funcional expresado"/>
           <Propiedades 
           cadena="Esto es una cadena de texto" 
@@ -51,6 +54,7 @@ class App extends Component {
           <MasSobreEventos/>
           <ComunicacionCompoentes/>
           <CicloVida/>
+          <AjaxApis/>
         </section>
 
 
