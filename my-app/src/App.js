@@ -10,6 +10,7 @@ import { EventosEs6, EventosEs7, MasSobreEventos } from './components/eventos';
 import ComunicacionCompoentes from './components/ComunicacionCompoentes';
 import { CicloVida } from './components/CicloVida';
 import AjaxApis from './components/AjaxApis';
+import ContadorHooks from './components/ContadorHooks';
 class App extends Component {
 
   render() {
@@ -55,6 +56,8 @@ class App extends Component {
           <ComunicacionCompoentes/>
           <CicloVida/>
           <AjaxApis/>
+          <hr/>
+          <ContadorHooks titulo="Seguidores"/>
         </section>
 
 
