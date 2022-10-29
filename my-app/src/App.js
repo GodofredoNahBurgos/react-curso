@@ -12,6 +12,7 @@ import { CicloVida } from './components/CicloVida';
 import AjaxApis from './components/AjaxApis';
 import ContadorHooks from './components/ContadorHooks';
 import ScrollHooks from './components/ScrollHooks';
+import RelojHooks from './components/RelojHooks';
 class App extends Component {
 
   render() {
@@ -60,6 +61,7 @@ class App extends Component {
           <hr/>
           <ContadorHooks titulo="Seguidores"/>
           <ScrollHooks/>
+          <RelojHooks/>
         </section>
 
 
