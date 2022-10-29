@@ -11,6 +11,7 @@ import ComunicacionCompoentes from './components/ComunicacionCompoentes';
 import { CicloVida } from './components/CicloVida';
 import AjaxApis from './components/AjaxApis';
 import ContadorHooks from './components/ContadorHooks';
+import ScrollHooks from './components/ScrollHooks';
 class App extends Component {
 
   render() {
@@ -58,6 +59,7 @@ class App extends Component {
           <AjaxApis/>
           <hr/>
           <ContadorHooks titulo="Seguidores"/>
+          <ScrollHooks/>
         </section>
 
 
