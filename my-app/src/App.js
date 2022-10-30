@@ -14,6 +14,7 @@ import ContadorHooks from './components/ContadorHooks';
 import ScrollHooks from './components/ScrollHooks';
 import RelojHooks from './components/RelojHooks';
 import AjaxHooks from './components/AjaxHooks';
+import HooksPersonalizados from './components/HooksPersonalizados';
 class App extends Component {
 
   render() {
@@ -65,6 +66,8 @@ class App extends Component {
           <RelojHooks/>
           <hr/>
           <AjaxHooks/>
+          <hr/>
+          <HooksPersonalizados/>
         </section>
 
 
