@@ -15,6 +15,7 @@ import ScrollHooks from './components/ScrollHooks';
 import RelojHooks from './components/RelojHooks';
 import AjaxHooks from './components/AjaxHooks';
 import HooksPersonalizados from './components/HooksPersonalizados';
+import Refencias from './components/Referencias';
 class App extends Component {
 
   render() {
@@ -68,6 +69,7 @@ class App extends Component {
           <AjaxHooks/>
           <hr/>
           <HooksPersonalizados/>
+          <Refencias/>
         </section>
 
 
