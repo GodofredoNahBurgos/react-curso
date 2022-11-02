@@ -17,6 +17,7 @@ import AjaxHooks from './components/AjaxHooks';
 import HooksPersonalizados from './components/HooksPersonalizados';
 import Refencias from './components/Referencias';
 import Formularios from './components/Formularios';
+import Estilos from './components/Estilos';
 class App extends Component {
 
   render() {
@@ -73,6 +74,7 @@ class App extends Component {
           <Refencias/>
           <hr/>
           <Formularios/>
+          <Estilos/>
         </section>
 
 
