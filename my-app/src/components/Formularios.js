@@ -17,7 +17,6 @@ export default function Formularios(){
         });
     }
 
-
     const handleSubmit = e => {
         e.preventDefault();
         alert("El formulario se ha enviado");

@@ -9,7 +9,7 @@ export default function Estilos(){
         borderRadius: ".5rem",
         margin: "2rem auto",
         maxWidth: "50%"
-    }
+    };
 
     return(
         <section class="Estilos">
@@ -17,12 +17,13 @@ export default function Estilos(){
             <h3 className="bg-react">Estilos en hoja CSS externa</h3>
             <h3 className="bg-react" style={{borderRadius: ".25rem", margin: "1rem"}}>Estilos en linea (atributo style)</h3>
             <h3 className="bg-react" style={myStyles}>Estilos en linea </h3>
-            <h3 className="bg-react">Agregando Normalize
+            <h3 className="bg-react">
+                Agregando Normalize
             <br/>
-            <code>@import-normalize</code>
+            <code>@import-normalize;</code>
             </h3>
-            <h3 className={moduleStyles.error}>Estilos con Módulos</h3>
-            <h3 className={moduleStyles.success}>Estilos con Módulos</h3>
+            <h3 className={moduleStyles}>Estilos con Módulos</h3>
+            <h3 className={moduleStyles}>Estilos con Módulos</h3>
         </section>
     );
 }
