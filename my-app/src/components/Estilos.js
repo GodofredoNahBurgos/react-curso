@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from "react";
 import "./Estilos.css";
+import "./Estilos.scss";
 import moduleStyles from "./Estilos.module.css";
 
 export default function Estilos(){
@@ -21,8 +22,9 @@ export default function Estilos(){
             <br/>
             <code>@import-normalize</code>
             </h3>
-            <h3 className={moduleStyles.error}>Estilos con Módulos</h3>
+            <h3 className={moduleStyles.errpr}>Estilos con Módulos</h3>
             <h3 className={moduleStyles.success}>Estilos con Módulos</h3>
+            <h3 className="bg-sass">Estilos con Sass</h3>           
         </section>
     );
 }

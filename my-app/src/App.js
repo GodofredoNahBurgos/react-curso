@@ -18,6 +18,8 @@ import HooksPersonalizados from './components/HooksPersonalizados';
 import Refencias from './components/Referencias';
 import Formularios from './components/Formularios';
 import Estilos from './components/Estilos';
+import ComponentesEstilizados from './components/ComponentesEstilizados';
+
 class App extends Component {
 
   render() {
@@ -75,13 +77,11 @@ class App extends Component {
           <hr/>
           <Formularios/>
           <Estilos/>
+          <ComponentesEstilizados/>
         </section>
 
 
         </div>
-        <p className="App-intro">
-          To get started, editar <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
