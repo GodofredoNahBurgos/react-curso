@@ -1,21 +1,11 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { CrudApp } from './components/CrudApp';
 
-class App extends Component {
-  render() {
+export default function App(){
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1>Ejercicios con React</h1>
+        <CrudApp/>
       </div>
-    );
-  }
+    )
 }
-
-export default App;
