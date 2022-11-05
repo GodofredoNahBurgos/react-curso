@@ -4,8 +4,8 @@ import { CrudApp } from './components/CrudApp';
 export default function App(){
     return (
       <div>
-        <h1>Ejercicios con React</h1>
+        <h2>Ejercicios con React</h2>
         <CrudApp/>
       </div>
-    )
-}
+    );
+};

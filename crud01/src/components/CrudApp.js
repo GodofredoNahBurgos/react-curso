@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import CrudForm from './CrudForm';
 import CrudTable from './CrudTable';
 
@@ -41,15 +40,22 @@ export const CrudApp = () => {
             ...db, data
         });
     };
-    const updateData = (data) => {};
+
+    const updateData = (data) => {
+        let newData = db.map(el => el.id === data.id ? data : el);
+        setDb(newData);
+    };
+
     const deleteData = (id) => {};
+
   return (
     <div>
         <h2>CRUD APP</h2>
         <CrudForm 
         createData={createData} 
         updateDate={updateData}
-        dataToEdit={setDataToEdit}
+        dataToEdit={dataToEdit}
+        setDataToEdit={setDataToEdit}
         />
         <CrudTable 
         data={db} 
@@ -57,5 +63,5 @@ export const CrudApp = () => {
         deleteData={deleteData}
         />
     </div>
-  )
-}
+  );
+};

@@ -4,22 +4,30 @@ const initialForm = {
     name: "",
     constellation: "",
     id: null,
-}
+};
 
 const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
     const [form, setForm] = useState(initialForm);
 
+    useEffect(() => {
+      if(dataToEdit){
+        setForm(dataToEdit);
+      }else{
+        setForm(initialForm);
+      }
+    }, [dataToEdit])
+    
     const handleChange = (e) => {
       setForm({
         ...form, 
         [e.target.name]: e.target.value,
       });
-    }
+    };
 
     const handleSubmit = (e) => {
       e.preventDefault();
 
-      if(!form.name || form.constellation){
+      if(!form.name || !form.constellation){
         alert("Datos Incompletos");
         return;
       }
@@ -31,12 +39,12 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
       }
 
       handleReset();
-    }
+    };
 
     const handleReset = (e) => {
       setForm(initialForm);
       setDataToEdit(null);
-    }
+    };
 
   return (
     <div>
@@ -56,16 +64,8 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
         onChange={handleChange} 
         value={form.constellation}
         />
-        <input 
-        type="submit" 
-        value="Enviar" 
-        onClick={handleSubmit}
-        />
-        <input 
-        type="reset" 
-        value="Limpiar" 
-        onClick={handleReset}
-        />
+        <input type="submit" value="Enviar"/>
+        <input type="reset" value="Limpiar" onClick={handleReset}/>
     </form>
     </div>
   );
