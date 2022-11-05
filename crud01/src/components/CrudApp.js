@@ -35,14 +35,27 @@ export const CrudApp = () => {
     const [db, setDb] = useState(initialDb);
     const [dataToEdit, setDataToEdit] = useState(null);
     
-    const createData = (data) => {};
+    const createData = (data) => {
+        data.id = Date.now();
+        setDb({
+            ...db, data
+        });
+    };
     const updateData = (data) => {};
     const deleteData = (id) => {};
   return (
     <div>
         <h2>CRUD APP</h2>
-        <CrudForm/>
-        <CrudTable data={db}/>
+        <CrudForm 
+        createData={createData} 
+        updateDate={updateData}
+        dataToEdit={setDataToEdit}
+        />
+        <CrudTable 
+        data={db} 
+        setDataToEdit={setDataToEdit} 
+        deleteData={deleteData}
+        />
     </div>
   )
 }

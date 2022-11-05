@@ -6,22 +6,66 @@ const initialForm = {
     id: null,
 }
 
-const CrudForm = () => {
-    const [form, Setform] = useState(initialForm);
-    const handleChange = (e) => {}
+const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
+    const [form, setForm] = useState(initialForm);
 
-    const handleSubmit = (e) => {}
+    const handleChange = (e) => {
+      setForm({
+        ...form, 
+        [e.target.name]: e.target.value,
+      });
+    }
 
-    const handleReset = (e) => {}
+    const handleSubmit = (e) => {
+      e.preventDefault();
+
+      if(!form.name || form.constellation){
+        alert("Datos Incompletos");
+        return;
+      }
+
+      if(form.id === null){
+        createData(form);
+      }else{
+        updateData(form);
+      }
+
+      handleReset();
+    }
+
+    const handleReset = (e) => {
+      setForm(initialForm);
+      setDataToEdit(null);
+    }
 
   return (
     <div>
     <h3>Agregar</h3>
     <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder='Nombre' onChange={handleSubmit} value={form.name}/>
-        <input type="text" name="constellation" placeholder='Constelaciòn' onChange={handleReset} value={form.constellation}/>
-        <input type="submit" value="Enviar" onClick={handleSubmit}/>
-        <input type="reset" value="Limpiar" onClick={handleReset}/>
+        <input 
+        type="text" 
+        name="name" 
+        placeholder='Nombre' 
+        onChange={handleChange} 
+        value={form.name}
+        />
+        <input 
+        type="text" 
+        name="constellation" 
+        placeholder='Constelaciòn' 
+        onChange={handleChange} 
+        value={form.constellation}
+        />
+        <input 
+        type="submit" 
+        value="Enviar" 
+        onClick={handleSubmit}
+        />
+        <input 
+        type="reset" 
+        value="Limpiar" 
+        onClick={handleReset}
+        />
     </form>
     </div>
   );
