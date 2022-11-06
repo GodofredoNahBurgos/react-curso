@@ -6,6 +6,7 @@ export default function App(){
       <div>
         <h2>Ejercicios con React</h2>
         <CrudApp/>
+        <hr/>
       </div>
     );
 }
