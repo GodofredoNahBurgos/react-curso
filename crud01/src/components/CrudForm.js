@@ -6,7 +6,7 @@ const initialForm = {
     id: null,
 };
 
-const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
+const CrudForm = ({createData, updateDate, dataToEdit, setDataToEdit}) => {
     const [form, setForm] = useState(initialForm);
 
     useEffect(() => {
@@ -35,7 +35,7 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
       if(form.id === null){
         createData(form);
       }else{
-        updateData(form);
+        updateDate(form);
       }
 
       handleReset();
@@ -48,7 +48,7 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
 
   return (
     <div>
-    <h3>Agregar</h3>
+    <h3>{!dataToEdit?"Agregar":"Editar"}</h3>
     <form onSubmit={handleSubmit}>
         <input 
         type="text" 

@@ -15,14 +15,16 @@ const CrudTable = ({data, setDataToEdit, deleteData}) => {
         </thead>
         <tbody>
           {data.length===0?(
-            <tr>
-              <td colSpan="3">Sin Datos</td>
-            </tr>
+          <tr><td colSpan="3">Sin Datos</td></tr>
           ):(
-            data.map((el) => <CrudTableRow 
+            data.map((el) => (
+            <CrudTableRow 
             key={el.id} 
-            el={el} />
-            )
+            el={el} 
+            setDataToEdit={setDataToEdit} 
+            deleteData={deleteData}
+            />
+            ))
           )}
         </tbody>
       </table>
